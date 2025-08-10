@@ -105,4 +105,10 @@ court_data_fetcher/
 ```
 
 
-<img width="525" height="621" alt="image" src="https://github.com/user-attachments/assets/9686c9cb-f399-46dc-8622-e501ebf98332" />
+##  Output Screenshots
+
+<img width="1811" height="940" alt="image" src="https://github.com/user-attachments/assets/dc3734ac-01db-4655-b284-0e0b94a42263" />
+
+<img width="1598" height="935" alt="image" src="https://github.com/user-attachments/assets/33da401d-1bf1-48a5-b1b1-156f6e7b3e2d" />
+
+
