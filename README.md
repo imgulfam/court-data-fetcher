@@ -82,7 +82,7 @@ This method is reliable, legal, and does not require any third-party services.
 
 
 ## Project Structure
-
+```bash
 court_data_fetcher/
 │
 ├── app/                      # Core application logic
@@ -102,3 +102,4 @@ court_data_fetcher/
 ├── README.md                 # Setup, usage, CAPTCHA strategy
 ├── requirements.txt          # Python dependencies
 └── run.py                    # Entry point for Flask app
+```
