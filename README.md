@@ -103,3 +103,6 @@ court_data_fetcher/
 ├── requirements.txt          # Python dependencies
 └── run.py                    # Entry point for Flask app
 ```
+
+
+<img width="525" height="621" alt="image" src="https://github.com/user-attachments/assets/9686c9cb-f399-46dc-8622-e501ebf98332" />
