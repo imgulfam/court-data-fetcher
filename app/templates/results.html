@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <h1><i class="fa-solid fa-gavel"></i> Search Results</h1>
+        <div class="results-container">
+            {% if data and data.status == 'Success' %}
+                <dl>
+                    <dt>Party Names:</dt>
+                    <dd>{{ data.party_names }}</dd>
+
+                    <dt>Hearing / Order Date Info:</dt>
+                    <dd>{{ data.next_hearing_date }}</dd>
+                    
+                    <dt>Orders/Judgments Page:</dt>
+                    <dd><a href="{{ data.pdf_link }}" target="_blank">View Judgment/Download</a></dd>
+                </dl>
+            
+            {% elif data and data.status == 'Error' %}
+                <div class="error-message">
+                    <h3>An Error Occurred</h3>
+                    <p>{{ data.error_message }}</p>
+                </div>
+
+            {% else %}
+                <p>No search performed or no data returned.</p>
+            {% endif %}
+        </div>
+
+        <a href="{{ url_for('main.index') }}" class="new-search-link">Perform a New Search</a>
+    </div>
+{% endblock %}

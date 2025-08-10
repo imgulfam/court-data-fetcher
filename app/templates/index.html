@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <h1><i class="fa-solid fa-gavel"></i> Court Case Search</h1>
+        <form id="search-form" action="{{ url_for('main.search') }}" method="POST">
+            
+            <div class="form-group">
+                <label for="case_type">Case Type:</label>
+                <i class="fa-solid fa-stamp input-icon"></i>
+                <input type="text" id="case_type" name="case_type" placeholder="e.g., W.P.(C)" required>
+            </div>
+
+            <div class="form-group">
+                <label for="case_number">Case Number:</label>
+                <i class="fa-solid fa-hashtag input-icon"></i>
+                <input type="text" id="case_number" name="case_number" required>
+            </div>
+
+            <div class="form-group">
+                <label for="case_year">Year:</label>
+                <i class="fa-solid fa-calendar-days input-icon"></i>
+                <input type="number" id="case_year" name="case_year" min="1950" max="2025" required>
+            </div>
+
+            <button type="submit" id="submit-button">
+                <span class="button-text">Search Case</span>
+            </button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.getElementById('search-form');
+        const submitButton = document.getElementById('submit-button');
+        const buttonText = document.querySelector('.button-text');
+
+        form.addEventListener('submit', function() {
+            // Disable the button
+            submitButton.disabled = true;
+            // Add 'loading' class for styling
+            submitButton.classList.add('loading');
+            // Change the text and add a spinner
+            buttonText.innerHTML = '<span class="spinner"></span> Searching...';
+        });
+    </script>
+{% endblock %}
